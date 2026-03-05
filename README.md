@@ -2,6 +2,10 @@
 
 A real-time fall detection system built on the **B-L4S5I-IOT01A** (STM32L4S5VIT6) development board. The system uses on-board sensors and the ISM43362 Wi-Fi module to detect falls, alert nearby personnel via buzzer and LED, and send remote notifications to a Telegram group chat.
 
+## Presentation Slides
+
+[View Presentation (PPTX)](docs/Assignment_52_A0309132N_A0309266Y.pptx)
+
 ## Features
 
 - **Fall detection state machine** -- freefall, impact, long-lie confirmation, and recovery stages using accelerometer, gyroscope, and barometer data
@@ -32,8 +36,9 @@ Drivers/
   BSP/          -- Board Support Package (sensor drivers, Wi-Fi AT command driver)
   STM32L4xx_HAL_Driver/  -- STM32 HAL library
   CMSIS/        -- ARM CMSIS headers
+telegram-bridge/
+  fallalertbot.py   -- Python bridge script (ntfy.sh -> Telegram)
 docs/
-  fallalertbot.py                          -- Python bridge script (ntfy.sh -> Telegram)
   Assignment_52_A0309132N_A0309266Y.pptx   -- Presentation slides
 ```
 
@@ -67,7 +72,7 @@ Requires Python 3 with the `requests` library. Run on any internet-connected mac
 
 ```
 pip install requests
-python docs/fallalertbot.py
+python telegram-bridge/fallalertbot.py
 ```
 
 Update `TELEGRAM_TOKEN` and `CHAT_ID` in the script with your own bot credentials.
