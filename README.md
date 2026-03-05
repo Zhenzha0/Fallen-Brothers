@@ -77,9 +77,8 @@ python telegram-bridge/fallalertbot.py
 
 Update `TELEGRAM_TOKEN` and `CHAT_ID` in the script with your own bot credentials.
 
-## Authors
+## Authors(The fallen brothers)
 
-- A0309132N
-- A0309266Y
+- Yang Zhenzhao
+- Lee Su Kiat Sean
 
-CG2028 Assignment, AY2025/26
